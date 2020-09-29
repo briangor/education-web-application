@@ -1,0 +1,57 @@
+<div ui-view>
+    <div class="normalheader  small-header">
+        <div class="hpanel">
+            <div class="panel-body">
+                <a class="small-header-action" href="">
+                    <div class="clip-header">
+                        <i class="fa fa-arrow-down">                            
+                        </i>
+                    </div>
+                </a>
+                <div id="hbreadcrumb" class="pull-right">
+                    <ol class="hbreadcrumb breadcrumb">
+                        <li><a ui-sref="home.global"><span>Home</span></a></li>
+                        <li class="active">
+                            <span>Institution</span>
+                        </li>
+                    </ol>
+                </div>
+                <h2 class="font-light m-b-xs">
+                    Admin
+                </h2>
+                <small>Institution</small>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Institution
+                </div>
+                <div class="panel-body">
+                    <label class="label label-success">Name</label> {{institutions[passed_index].name}}
+                </div>
+            </div>
+        </div>
+
+    <div class="col-md-12 col-xs-12">
+        <div class="hpanel">
+            <div class="panel-heading" style="color:rgb(223, 6, 6)">
+                Delete Institution
+            </div>
+            <div class="panel-body">
+                <form id="delInstitutionForm" name="delInstitutionForm" ng-submit="delInstitution()">
+                    <div class="col-md-12" style="padding: 0">
+                        {{institutions[passed_index].name}}
+                    </div>
+                    <div class="col-md-12" style="padding: 16px 0 0 0">
+                        <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

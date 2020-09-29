@@ -1,0 +1,17 @@
+com\brian\educationwebapp\jpa\TransactionProvider.class
+com\brian\educationwebapp\entities\Institution_.class
+com\brian\educationwebapp\ejb\RecordsBean.class
+com\brian\educationwebapp\entities\Institution.class
+com\brian\educationwebapp\config\MyCorsFilter.class
+com\brian\educationwebapp\config\NoCachingFilter.class
+com\brian\educationwebapp\entities\Student.class
+com\brian\educationwebapp\entities\Student_.class
+com\brian\educationwebapp\utils\Utils.class
+com\brian\educationwebapp\entities\Course_.class
+com\brian\educationwebapp\config\JerseyObjectMapperProvider.class
+com\brian\educationwebapp\config\MyApplication.class
+com\brian\educationwebapp\entities\Course.class
+com\brian\educationwebapp\utils\JsonResponse.class
+com\brian\educationwebapp\config\MyServletRequestWrapper.class
+com\brian\educationwebapp\api\Records.class
+com\brian\educationwebapp\ejb_db\DbBean_Entities.class

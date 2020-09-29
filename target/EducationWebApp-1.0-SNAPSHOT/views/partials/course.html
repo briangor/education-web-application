@@ -1,0 +1,104 @@
+<div ui-view>
+    <div class="normalheader  small-header">
+        <div class="hpanel">
+
+            <div class="panel-body">
+                <div id="hbreadcrumb" class="pull-right">
+                    <ol class="hbreadcrumb breadcrumb">
+                        <li><a ui-sref="home.global"><span>Home</span></a></li>
+                        <li class="active">
+                            <span>Course</span>
+                        </li>
+                    </ol>
+                </div>
+                <h2 class="font-light m-b-xs">
+                    Admin
+                </h2>
+                <small>Course</small>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <div class="hpanel">
+            </div>
+        </div>
+
+        <div class="col-md-12 col-xs-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Add Course
+                </div>
+                <div class="panel-body">
+                    <form id="addCourseForm" name="addCourseForm" ng-submit="addCourse()">
+                        <div class="col-md-6" style="padding: 0">
+                            <input type="text" title="Please enter the course name" placeholder="Course Name" required name="coursename" id="coursename" ng-model="new_course.name" class="form-control">
+                        </div>
+                        <div class="col-md-12" style="padding: 0; margin-bottom: 15px;"></div>
+                        <div class="col-md-6" style="padding: 0">
+                            <input type="text" title="Please enter the institution" placeholder="Institution Name" required name="universityname" id="coursename" ng-model="new_course.name" class="form-control">
+                        </div>
+                        <div class="col-md-12" style="padding: 16px 0 0 0">
+                            <button class="btn btn-sm btn-primary" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-md-12 col-xs-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    Course List
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6 col-xs-6" style="padding: 0">
+                        <input type="text" placeholder="Enter text to search" ng-model="search" class="form-control">
+                    </div>
+                    <div class="col-md-12" style="padding: 0; margin-bottom: 15px;"></div>
+                    <div class="col-md-6 col-xs-6" style="padding: 0">
+                    </div>
+                    <div class="col-md-12 col-xs-12" style="padding: 16px 0 0 0">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="i in courses| filter : search">
+                                        <td style="width: 1%">{{$index + 1}}</td>
+                                        <td>{{i.name}}</td>
+                                        <td style="width: 1%">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 col-xs-12">
+            <div class="hpanel">
+                <div class="panel-heading" style="color:rgb(223, 6, 6)">
+                    Delete Course
+                </div>
+                <div class="panel-body">
+                    <form id="delCourseForm" name="delCourseForm" ng-submit="delCourse()">
+                        <div class="col-md-12" style="padding: 0">
+                            <input type="text" title="Please enter the course name" placeholder="Course Name" required name="coursename" id="coursename" ng-model="del_course.name" class="form-control">
+                        </div>
+                        <div class="col-md-12" style="padding: 16px 0 0 0">
+                            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
